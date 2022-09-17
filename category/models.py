@@ -1,4 +1,4 @@
-from unicodedata import category
+from django.urls import reverse
 from django.db import models
 
 
@@ -11,7 +11,10 @@ class Category(models.Model):
     class Meta:
         verbose_name = 'Categoría'
         verbose_name_plural = 'Categorías'
-        ordering = ['-id']
+        # ordering = ['-id']
+    
+    def get_url(self):
+        return reverse('products_by_category', args=[self.slug])
 
     def __str__(self):
         return self.category_name
