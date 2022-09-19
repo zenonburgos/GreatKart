@@ -6,7 +6,7 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTop4">
-            <ul class="navbar-nav mr-auto">
+            <!-- <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
                         <a href="#" class="nav-link">   English </a>
                     
@@ -14,10 +14,10 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link"> USD </a>
                 </li>
-            </ul>
+            </ul> -->
             <ul class="navbar-nav">
                 <li><a href="#" class="nav-link"> <i class="fa fa-envelope"></i> Email </a></li>
-                <li><a href="#" class="nav-link"> <i class="fa fa-phone"></i> Call us </a></li>
+                <li><a href="#" class="nav-link"> <i class="fa fa-phone"></i> Llámanos </a></li>
             </ul> <!-- list-inline //  -->
             </div> <!-- navbar-collapse .// -->
         </div> <!-- container //  -->
@@ -45,9 +45,9 @@
                 </div> <!-- col.// -->
                 <a href="{% url 'store' %}" class="btn btn-outline-primary">Store</a>
                 <div class="col-lg  col-md-6 col-sm-12 col">
-                    <form action="#" class="search">
+                    <form action="{% url 'search' %}" class="search" method="GET">
                         <div class="input-group w-100">
-                            <input type="text" class="form-control" style="width:60%;" placeholder="Search">
+                            <input type="text" class="form-control" style="width:60%;" placeholder="Buscar" name="keyword">
                             
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="submit">
